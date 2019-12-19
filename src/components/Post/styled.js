@@ -1,35 +1,27 @@
 import styled from 'styled-components'
 
 export const PostHeader = styled.header`
-  color: #fff;
-  margin: auto;
-  max-width: 70rem;
-  padding: 5rem 5rem 0;
+  color: #333;
 `
 
 export const PostTitle = styled.h1`
-  font-size: 4rem;
+  font-size: 3rem;
   font-weight: 700;
-  padding: 0 1.4rem;
   margin: 1rem auto;
 `
 
 export const PostDescription = styled.h2`
-  font-size: 2rem;
+  font-size: 1.75rem;
   font-weight: 200;
-  padding: 0 1.4rem;
 `
 
 export const PostDate = styled.p`
-  font-size: 1.1rem;
+  font-size: 1rem;
   font-weight: 100;
-  padding: 0 1.4rem;
 `
 
 export const MainContent = styled.section`
   margin: auto;
-  max-width: 70rem;
-  padding: 2rem 5rem;
   p,
   h1,
   h2,
@@ -40,12 +32,11 @@ export const MainContent = styled.section`
   .tags,
   iframe,
   .button-post {
-    color: #fff;
+    color: #333;
     font-size: 1.25rem;
     font-weight: 300;
     line-height: 1.7;
     letter-spacing: 0.069rem;
-    padding: 0 1.4rem;
   }
   p {
     margin: 0 auto 1.6rem;
@@ -91,7 +82,7 @@ export const MainContent = styled.section`
     margin: 3.125rem auto;
   }
   hr {
-    border: 1px solid #38444d;
+    border: 1px solid rgba(0, 0, 0, 0.1);
     margin: 3rem auto;
   }
   #twitter-widget-0,
@@ -142,7 +133,11 @@ export const MainContent = styled.section`
     }
   }
   .gatsby-highlight {
-    padding: 0 1.6rem 1.6rem;
+    background: none;
+    pre[class*='language-'] {
+      background-color: #282a36;
+      padding: 2rem;
+    }
   }
   .instagram-media {
     margin: 1rem auto !important;

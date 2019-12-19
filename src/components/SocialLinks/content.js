@@ -1,26 +1,18 @@
-const handle = 'ahmadlufiau'
-
-const links = [
+export default [
   {
     label: 'Github',
-    url: `https://github.com/${handle}`,
+    url: `https://github.com/linconkusunoki`,
   },
   {
-    label: 'Twitter',
-    url: `https://twitter.com/${handle}`,
-  },
-  {
-    label: 'Youtube',
-    url: `https://www.youtube.com/${handle}`,
+    label: 'Codepen',
+    url: `https://codepen.io/linconkusunoki`,
   },
   {
     label: 'Instagram',
-    url: `https://www.instagram.com/${handle}`,
+    url: `https://www.instagram.com/linconkusunoki`,
   },
   {
-    label: 'Unsplash',
-    url: `https://unsplash.com/${handle}`,
+    label: 'Linkedin',
+    url: `https://www.linkedin.com/in/lincon-kusunoki`,
   },
 ]
-
-export default links

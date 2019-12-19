@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 
 export const SocialLinksWrapper = styled.nav`
-  margin: 2rem auto;
+  margin: 0 auto 1.5rem;
   width: 100%;
 `
 
@@ -15,16 +15,16 @@ export const SocialLinksList = styled.ul`
 export const SocialLinksItem = styled.li``
 
 export const SocialLinksLink = styled.a`
-  color: #8899a6;
+  color: rgba(255, 255, 255, 0.65);
   text-decoration: none;
-  transition: color 0.5s;
+  transition: color 200ms;
   &:hover {
-    color: #1fa1f2;
+    color: #ff79c6;
   }
 `
 
 export const IconWrapper = styled.div`
   fill: #bbb;
-  width: 30px;
-  height: 30px;
+  width: 20px;
+  height: 20px;
 `

@@ -1,12 +1,29 @@
 const links = [
-    {
-      label: 'Home',
-      url: '/',
-    },
-    {
-      label: 'About',
-      url: '/about/',
-    },
+  {
+    label: 'About me',
+    icon: 'User',
+    url: '/',
+  },
+  {
+    label: 'Resume',
+    icon: 'FileText',
+    url: '/resume',
+  },
+  {
+    label: 'Portfolio',
+    icon: 'Award',
+    url: '/portfolio',
+  },
+  {
+    label: 'Blog',
+    icon: 'Coffee',
+    url: '/blog',
+  },
+  {
+    label: 'Contact',
+    icon: 'Mail',
+    url: '/contact',
+  },
 ]
-  
+
 export default links

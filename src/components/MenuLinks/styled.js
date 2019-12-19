@@ -1,25 +1,35 @@
 import styled from 'styled-components'
 import { Link } from 'gatsby'
 
-export const MenuLinksWrapper = styled.nav``
+export const MenuLinksWrapper = styled.nav`
+  text-align: left;
+  width: 100%;
+`
 
 export const MenuLinksList = styled.ul`
-  font-size: 1.2rem;
+  font-size: 1rem;
   font-weight: 300;
 `
 
 export const MenuLinksItem = styled.li`
-  padding: 0.5rem 0;
+  margin-bottom: 1rem;
   .active {
-    color: #1fa1f2;
+    color: #ff5555;
+  }
+  svg {
+    height: 1.5rem;
+    margin-right: 0.75rem;
   }
 `
 
 export const MenuLinksLink = styled(Link)`
-  color: #8899a6;
+  border-radius: 2rem;
+  color: #fff;
+  display: flex;
+  align-items: center;
   text-decoration: none;
-  transition: color 0.5s;
+  transition: color 200ms;
   &:hover {
-    color: #1fa1f2;
+    color: #ff5555;
   }
 `

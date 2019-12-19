@@ -8,27 +8,33 @@ export const ProfileWrapper = styled.section`
 `
 
 export const ProfileLink = styled(Link)`
-  color: #8899a6;
+  color: #f8f8f2;
   text-decoration: none;
   transition: color 0.5s;
   &:hover {
-    color: #1fa1f2;
+    color: #ff5555;
   }
 `
 
 export const ProfileAuthor = styled.h1`
+  color: #f8f8f2;
   font-size: 1.6rem;
-  margin: 0.5rem auto 1.5rem;
+  font-weight: bold;
+  margin: 0;
 `
 
 export const ProfilePosition = styled.small`
+  color: #f8f8f2;
   display: block;
   font-size: 1.2rem;
   font-weight: 300;
+  margin-bottom: 1.5rem;
 `
 
 export const ProfileDescription = styled.p`
+  color: #f8f8f2;
   font-size: 1rem;
   font-weight: 300;
   line-height: 1.4;
+  margin-bottom: 1.5rem;
 `

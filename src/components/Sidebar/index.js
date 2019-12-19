@@ -1,15 +1,17 @@
 import React from 'react'
 import Profile from '../Profile'
-import SocialLinks from '../SocialLinks'
 import MenuLinks from '../MenuLinks'
-
+import { Send } from 'styled-icons/feather/Send'
 import * as S from './styled'
 
 const Sidebar = () => (
   <S.SidebarWrapper>
     <Profile />
-    <SocialLinks />
     <MenuLinks />
+    <S.HireLink to="/contact">
+      <Send />
+      Hire me
+    </S.HireLink>
   </S.SidebarWrapper>
 )
 
