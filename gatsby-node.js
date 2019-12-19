@@ -17,7 +17,7 @@ exports.onCreateNode = ({ node, getNode, actions }) => {
     createNodeField({
       node,
       name: 'slug',
-      value: `/${slug.slice(12)}`,
+      value: `blog/${slug.slice(12)}`,
     })
   }
 }
@@ -35,7 +35,7 @@ exports.createPages = ({ graphql, actions }) => {
             frontmatter {
               background
               category
-              date(locale: "pt-br", formatString: "DD [de] MMMM [de] YYYY")
+              date(locale: "id-ID", formatString: "DD / MMMM / YYYY")
               description
               title
             }

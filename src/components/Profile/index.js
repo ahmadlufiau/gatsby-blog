@@ -24,8 +24,10 @@ const Profile = () => {
   return (
     <S.ProfileWrapper>
       <Avatar />
-      <S.ProfileAuthor>{title}</S.ProfileAuthor>
-      <S.ProfilePosition>{position}</S.ProfilePosition>
+      <div>
+        <S.ProfileAuthor>{title}</S.ProfileAuthor>
+        <S.ProfilePosition>{position}</S.ProfilePosition>
+      </div>
       <SocialLinks />
       <S.ProfileDescription>{description}</S.ProfileDescription>
     </S.ProfileWrapper>

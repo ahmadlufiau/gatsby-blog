@@ -10,7 +10,11 @@ const MenuLinks = () => (
         const Icon = Icons[link.icon]
         return (
           <S.MenuLinksItem key={i}>
-            <S.MenuLinksLink to={link.url} activeClassName="active">
+            <S.MenuLinksLink
+              to={link.url}
+              partiallyActive={link.url === '/blog' && true}
+              activeClassName="active"
+            >
               <Icon />
               {link.label}
             </S.MenuLinksLink>

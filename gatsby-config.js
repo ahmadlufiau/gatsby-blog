@@ -4,10 +4,12 @@ module.exports = {
     description: `My Blog.`,
     position: `My Blog`,
     author: `@ahmadlufiau`,
+    siteUrl: 'https://ahmadlufiau.netlify.com',
   },
   plugins: [
     `gatsby-plugin-styled-components`,
     `gatsby-plugin-react-helmet`,
+    `gatsby-plugin-netlify-cms`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {

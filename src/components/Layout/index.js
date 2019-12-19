@@ -9,10 +9,10 @@ const Layout = ({ children }) => {
   return (
     <S.LayoutWrapper>
       <GlobalStyles />
-      <Sidebar />
       <S.LayoutMain>
         <S.LayoutMainContent>{children}</S.LayoutMainContent>
       </S.LayoutMain>
+      <Sidebar />
     </S.LayoutWrapper>
   )
 }

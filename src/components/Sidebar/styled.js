@@ -1,16 +1,20 @@
 import styled from 'styled-components'
+import media from 'styled-media-query'
 import { Link } from 'gatsby'
 
 export const SidebarWrapper = styled.aside`
-  grid-area: sidebar;
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 100vh;
   background: #282a36;
   display: flex;
   align-items: center;
   flex-direction: column;
-  height: 100vh;
   overflow-y: scroll;
   padding: 2rem;
   text-align: center;
+  width: 270px;
   &::-webkit-scrollbar {
     width: 6px;
     background-color: #282a36;
@@ -19,6 +23,12 @@ export const SidebarWrapper = styled.aside`
     background-color: rgba(0, 0, 0, 0.2);
     border-radius: 0.5rem;
   }
+  ${media.lessThan('large')`
+    flex-direction: row;
+    padding: .5rem;
+    height: auto;
+    width: 100%;
+  `}
 `
 
 export const HireLink = styled(Link)`
@@ -40,4 +50,7 @@ export const HireLink = styled(Link)`
     height: 1.5rem;
     margin-right: 0.5rem;
   }
+  ${media.lessThan('large')`
+    display: none;
+  `}
 `
