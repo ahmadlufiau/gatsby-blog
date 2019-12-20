@@ -1,18 +1,14 @@
 export default [
   {
     label: 'Github',
-    url: `https://github.com/linconkusunoki`,
-  },
-  {
-    label: 'Codepen',
-    url: `https://codepen.io/linconkusunoki`,
+    url: `https://github.com/ahmadlufiau`,
   },
   {
     label: 'Instagram',
-    url: `https://www.instagram.com/linconkusunoki`,
+    url: `https://www.instagram.com/ahmadlufiau`,
   },
   {
     label: 'Linkedin',
-    url: `https://www.linkedin.com/in/lincon-kusunoki`,
+    url: `https://www.linkedin.com/in/ahmadlufialfianulula`,
   },
 ]

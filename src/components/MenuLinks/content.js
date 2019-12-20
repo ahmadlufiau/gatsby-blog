@@ -11,7 +11,7 @@ const links = [
   },
   {
     label: 'Blog',
-    icon: 'Coffee',
+    icon: 'FolderOpen',
     url: '/blog/',
   },
   {

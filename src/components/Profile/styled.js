@@ -29,6 +29,7 @@ export const ProfileAuthor = styled.h1`
   font-size: 1.6rem;
   font-weight: bold;
   margin: 0;
+  margin-bottom: 0.5rem;
   ${media.lessThan('large')`
     font-size: 1.2rem;
   `}

@@ -21,7 +21,7 @@ const BlogPost = ({ data, pageContext }) => {
       />
       <S.PostHeader>
         <S.PostDate>
-          {post.frontmatter.date} • {post.timeToRead} min read
+          {post.frontmatter.date} - {post.timeToRead} min read
         </S.PostDate>
         <S.PostTitle>{post.frontmatter.title}</S.PostTitle>
         <S.PostDescription>{post.frontmatter.description}</S.PostDescription>
@@ -43,7 +43,7 @@ export const query = graphql`
       frontmatter {
         title
         description
-        date(locale: "id-ID", formatString: "MMMM DD [of] YYYY")
+        date(locale: "id-ID", formatString: "DD MMMM YYYY")
         image
       }
       html

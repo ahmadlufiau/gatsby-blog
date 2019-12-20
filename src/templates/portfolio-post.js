@@ -40,7 +40,7 @@ export const query = graphql`
       frontmatter {
         title
         description
-        date(locale: "en-us", formatString: "MMMM DD [of] YYYY")
+        date(locale: "id-ID", formatString: "DD MMMM YYYY")
         image
       }
       html

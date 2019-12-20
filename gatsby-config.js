@@ -1,8 +1,8 @@
 module.exports = {
   siteMetadata: {
-    title: `My Blog`,
-    description: `My Blog.`,
-    position: `My Blog`,
+    title: `Personal Blog`,
+    description: `Ahmad Lufi Alfianul 'Ula`,
+    position: `@ahmadlufiau`,
     author: `@ahmadlufiau`,
     siteUrl: 'https://ahmadlufiau.netlify.com',
   },

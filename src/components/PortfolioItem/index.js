@@ -7,9 +7,9 @@ const PortfolioItem = ({ slug, title, image, link, description }) => (
     <S.Title>{title}</S.Title>
     <img src={image} alt="project" />
     <S.Description>{description}</S.Description>
-    <S.Link to={'/portfolio/' + slug}>Saiba mais</S.Link>
+    <S.Link to={'/portfolio/' + slug}>Detail</S.Link>
     <S.ExternalLink href={link} target="_blank" rel="noopener noreferrer">
-      Visualizar
+      Demo
     </S.ExternalLink>
   </S.Wrapper>
 )
