@@ -13,14 +13,13 @@ export const ProfileWrapper = styled.section`
 `
 
 export const ProfileLink = styled(Link)`
-  color: #f8f8f2;
+  display: block;
   text-decoration: none;
-  transition: color 0.5s;
+
   &:hover {
     color: #ff5555;
   }
   ${media.lessThan('large')`
-    display: flex;
     text-align: left;
   `}
 `

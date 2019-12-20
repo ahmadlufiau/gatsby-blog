@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import media from 'styled-media-query'
 
 export const PostHeader = styled.header`
   color: #333;
@@ -8,11 +9,21 @@ export const PostTitle = styled.h1`
   font-size: 3rem;
   font-weight: 700;
   margin: 1rem auto;
+
+  ${media.lessThan('large')`
+    font-size: 2.8rem;
+    line-height: 1.1;
+  `}
 `
 
 export const PostDescription = styled.h2`
   font-size: 1.75rem;
   font-weight: 200;
+
+  ${media.lessThan('large')`
+    font-size: 1.6rem;
+    line-height: 1.3;
+  `}
 `
 
 export const PostDate = styled.p`
@@ -22,6 +33,12 @@ export const PostDate = styled.p`
 
 export const MainContent = styled.section`
   margin: auto;
+
+  ${media.lessThan('large')`
+    padding: 2rem 0;
+    max-width: 100%;
+  `}
+
   p,
   h1,
   h2,
@@ -37,6 +54,10 @@ export const MainContent = styled.section`
     font-weight: 300;
     line-height: 1.7;
     letter-spacing: 0.069rem;
+
+    ${media.lessThan('large')`
+      word-break: break-word;
+    `}
   }
   p {
     margin: 0 auto 1.6rem;
@@ -74,6 +95,9 @@ export const MainContent = styled.section`
   iframe {
     padding: 0 1.6rem 1.6rem;
     width: 100%;
+    ${media.lessThan('large')`
+      padding: 0 1rem;
+    `}
   }
   blockquote {
     color: #fff;
@@ -101,12 +125,24 @@ export const MainContent = styled.section`
   }
   h1 {
     font-size: 2.8rem;
+
+    ${media.lessThan('large')`
+      font-size: 1.875rem;
+    `}
   }
   h2 {
     font-size: 2.1rem;
+
+    ${media.lessThan('large')`
+      font-size: 1.375rem;
+    `}
   }
   h3 {
     font-size: 1.6rem;
+
+    ${media.lessThan('large')`
+      font-size: 1.375rem;
+    `}
   }
   h4 {
     font-size: 1.4rem;
@@ -134,6 +170,11 @@ export const MainContent = styled.section`
   }
   .gatsby-highlight {
     background: none;
+
+    ${media.lessThan('large')`
+      padding: 0;
+    `}
+    
     pre[class*='language-'] {
       background-color: #282a36;
       padding: 2rem;

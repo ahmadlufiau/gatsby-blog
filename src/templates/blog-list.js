@@ -4,22 +4,14 @@ import { graphql } from 'gatsby'
 import Layout from '../components/Layout'
 import SEO from '../components/seo'
 import PostItem from '../components/PostItem'
-import Pagination from '../components/Pagination'
 
 const BlogList = props => {
-  const postList = props.data.allMarkdownRemark.edges
-
-  const { currentPage, numPages } = props.pageContext
-  const isFirst = currentPage === 1
-  const isLast = currentPage === numPages
-  const prevPage =
-    currentPage - 1 === 1 ? '/blog' : `/blog/page/${currentPage - 1}`
-  const nextPage = `/blog/page/${currentPage + 1}`
+  const list = props.data.allMarkdownRemark.edges
 
   return (
     <Layout>
       <SEO title="Blog" />
-      {postList.map(
+      {list.map(
         ({
           node: {
             frontmatter: { background, category, date, description, title },
@@ -38,25 +30,15 @@ const BlogList = props => {
           />
         )
       )}
-
-      <Pagination
-        isFirst={isFirst}
-        isLast={isLast}
-        currentPage={currentPage}
-        numPages={numPages}
-        prevPage={prevPage}
-        nextPage={nextPage}
-      />
     </Layout>
   )
 }
 
 export const query = graphql`
-  query PostList($skip: Int!, $limit: Int!) {
+  query {
     allMarkdownRemark(
       sort: { fields: frontmatter___date, order: DESC }
-      limit: $limit
-      skip: $skip
+      filter: { fileAbsolutePath: { glob: "**/blog/*.md" } }
     ) {
       edges {
         node {
@@ -66,7 +48,7 @@ export const query = graphql`
           frontmatter {
             background
             category
-            date(locale: "id-ID", formatString: "DD / MMMM / YYYY")
+            date(locale: "en-us", formatString: "MMM DD, YYYY")
             description
             title
           }

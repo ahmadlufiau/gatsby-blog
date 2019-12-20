@@ -7,8 +7,10 @@ export const LayoutMain = styled.main`
   background: #fff;
   min-height: 100vh;
   padding: 2rem 0 0 270px;
+  position: relative;
+  z-index: 1;
   ${media.lessThan('large')`
-    padding: 68px 1rem 1rem;
+    padding: 68px 1rem;
   `}
 `
 

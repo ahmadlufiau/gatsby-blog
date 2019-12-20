@@ -15,6 +15,7 @@ export const SidebarWrapper = styled.aside`
   padding: 2rem;
   text-align: center;
   width: 270px;
+  z-index: 2;
   &::-webkit-scrollbar {
     width: 6px;
     background-color: #282a36;
@@ -38,7 +39,7 @@ export const HireLink = styled(Link)`
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-top: 2.5rem;
+  margin-top: 1.75rem;
   padding: 0.5rem 1rem;
   text-decoration: none;
   width: 100%;

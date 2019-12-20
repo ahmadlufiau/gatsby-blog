@@ -5,24 +5,19 @@ const links = [
     url: '/',
   },
   {
-    label: 'Resume',
-    icon: 'FileText',
-    url: '/resume',
-  },
-  {
     label: 'Portfolio',
     icon: 'Award',
-    url: '/portfolio',
+    url: '/portfolio/',
   },
   {
     label: 'Blog',
     icon: 'Coffee',
-    url: '/blog',
+    url: '/blog/',
   },
   {
     label: 'Contact',
     icon: 'Mail',
-    url: '/contact',
+    url: '/contact/',
   },
 ]
 

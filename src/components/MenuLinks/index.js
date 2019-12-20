@@ -12,7 +12,9 @@ const MenuLinks = () => (
           <S.MenuLinksItem key={i}>
             <S.MenuLinksLink
               to={link.url}
-              partiallyActive={link.url === '/blog' && true}
+              partiallyActive={
+                link.url === '/blog/' || (link.url === '/portfolio/' && true)
+              }
               activeClassName="active"
             >
               <Icon />

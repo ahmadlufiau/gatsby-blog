@@ -12,7 +12,13 @@ const ContactPage = () => (
       fill in the contact form below or send me an email to{' '}
       <a href="mailto:linconkusunoki@gmail.com">linconkusunoki@gmail.com</a>
     </Paragraph>
-    <form>
+    <form
+      name="contact"
+      method="POST"
+      netlify-honeypot="bot-field"
+      data-netlify="true"
+    >
+      <input type="hidden" name="bot-field" />
       <Label for="name">Name</Label>
       <Input type="text" id="name" name="name" placeholder="John Doe" />
       <Label for="email">Email</Label>
@@ -37,7 +43,7 @@ const ContactPage = () => (
         rows="5"
         placeholder="Hello Lincon!"
       />
-      <Button>Send</Button>
+      <Button type="submit">Send</Button>
     </form>
   </Layout>
 )

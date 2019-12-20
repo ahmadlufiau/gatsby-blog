@@ -1,24 +1,11 @@
 const path = require('path')
 const { createFilePath } = require(`gatsby-source-filesystem`)
 
-// To add the slug field to each post
 exports.onCreateNode = ({ node, getNode, actions }) => {
   const { createNodeField } = actions
-  // Ensures we are processing only markdown files
   if (node.internal.type === 'MarkdownRemark') {
-    // Use `createFilePath` to turn markdown files in our `data/faqs` directory into `/faqs/slug`
-    const slug = createFilePath({
-      node,
-      getNode,
-      basePath: 'pages',
-    })
-
-    // Creates new query'able field with name of 'slug'
-    createNodeField({
-      node,
-      name: 'slug',
-      value: `blog/${slug.slice(12)}`,
-    })
+    const slug = createFilePath({ node, getNode, basePath: 'pages' })
+    createNodeField({ node, name: 'slug', value: slug.slice(12) })
   }
 }
 
@@ -26,7 +13,10 @@ exports.createPages = ({ graphql, actions }) => {
   const { createPage } = actions
   return graphql(`
     {
-      allMarkdownRemark(sort: { fields: frontmatter___date, order: DESC }) {
+      blog: allMarkdownRemark(
+        sort: { fields: frontmatter___date, order: DESC }
+        filter: { fileAbsolutePath: { glob: "**/blog/*.md" } }
+      ) {
         edges {
           node {
             fields {
@@ -35,9 +25,10 @@ exports.createPages = ({ graphql, actions }) => {
             frontmatter {
               background
               category
-              date(locale: "id-ID", formatString: "DD / MMMM / YYYY")
+              date(locale: "en-us", formatString: "MMM DD, YYYY")
               description
               title
+              image
             }
             timeToRead
           }
@@ -59,17 +50,52 @@ exports.createPages = ({ graphql, actions }) => {
           }
         }
       }
+
+      portfolio: allMarkdownRemark(
+        sort: { fields: frontmatter___date, order: DESC }
+        filter: { fileAbsolutePath: { glob: "**/portfolio/*.md" } }
+      ) {
+        edges {
+          node {
+            fields {
+              slug
+            }
+            frontmatter {
+              description
+              image
+              title
+              link
+            }
+          }
+        }
+      }
     }
   `).then(result => {
-    const posts = result.data.allMarkdownRemark.edges
+    const posts = result.data.blog.edges
+    const projects = result.data.portfolio.edges
+
+    projects.forEach(({ node }) => {
+      createPage({
+        path: '/portfolio/' + node.fields.slug,
+        component: path.resolve(`./src/templates/portfolio-post.js`),
+        context: {
+          slug: node.fields.slug,
+        },
+      })
+    })
+
+    Array.from({ length: projects.length }).forEach((_, index) => {
+      createPage({
+        path: '/portfolio/',
+        component: path.resolve(`./src/templates/portfolio-list.js`),
+      })
+    })
 
     posts.forEach(({ node, next, previous }) => {
       createPage({
-        path: node.fields.slug,
+        path: '/blog/' + node.fields.slug,
         component: path.resolve(`./src/templates/blog-post.js`),
         context: {
-          // Data passed to context is available
-          // in page queries as GraphQL variables.
           slug: node.fields.slug,
           previousPost: next,
           nextPost: previous,
@@ -77,19 +103,11 @@ exports.createPages = ({ graphql, actions }) => {
       })
     })
 
-    const postsPerPage = 6
-    const numPages = Math.ceil(posts.length / postsPerPage)
-
-    Array.from({ length: numPages }).forEach((_, index) => {
+    Array.from({ length: posts.length }).forEach((_, index) => {
       createPage({
-        path: index === 0 ? `/blog` : `/blog/page/${index + 1}`,
+        path: '/blog/',
         component: path.resolve(`./src/templates/blog-list.js`),
-        context: {
-          limit: postsPerPage,
-          skip: index * postsPerPage,
-          numPages,
-          currentPage: index + 1,
-        },
+        
       })
     })
   })

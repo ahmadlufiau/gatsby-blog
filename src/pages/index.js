@@ -1,6 +1,6 @@
 import React from 'react'
-import Layout from '../components/Layout'
 import media from 'styled-media-query'
+import Layout from '../components/Layout'
 import SEO from '../components/seo'
 import Recommendations from '../components/Recommendations'
 import styled from 'styled-components'
@@ -58,7 +58,7 @@ const AboutPage = () => {
       </Paragraph>
       <LinksWrapper>
         <LinkPorf to="/portfolio">View Portfolio</LinkPorf>
-        <LinkResume to="/resume">View Resume</LinkResume>
+        <LinkResume to="/">Download Resume</LinkResume>
       </LinksWrapper>
       <Title mt>What I do</Title>
       <TechList>
@@ -196,7 +196,9 @@ const LinkPorf = styled(Link)`
   background: #6272a4;
   border-radius: 6px;
   color: #f8f8f2;
-  display: block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   margin-right: 1rem;
   padding: 0.75rem 1rem;
   text-decoration: none;
@@ -213,7 +215,9 @@ const LinkResume = styled(Link)`
   background: #ff5555;
   border-radius: 6px;
   color: #f8f8f2;
-  display: block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   padding: 0.75rem 1rem;
   text-decoration: none;
   text-align: center;

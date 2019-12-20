@@ -171,8 +171,8 @@ const Recommendations = () => {
     },
   ]
 
-  return recommendations.map(recommendation => (
-    <S.Item>
+  return recommendations.map((recommendation, i) => (
+    <S.Item key={i}>
       <S.Quote>{recommendation.text}</S.Quote>
       <S.Person>
         <S.Avatar>
