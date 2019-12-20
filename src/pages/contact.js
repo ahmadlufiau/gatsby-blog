@@ -10,7 +10,7 @@ const ContactPage = () => (
     <Paragraph>
       Interested in hiring me for your project or just want to say hi? You can
       fill in the contact form below or send me an email to{' '}
-      <a href="mailto:linconkusunoki@gmail.com">linconkusunoki@gmail.com</a>
+      <a href="mailto:ahmadlufi300@gmail.com">ahmadlufi300@gmail.com</a>
     </Paragraph>
     <form
       name="contact"
@@ -20,13 +20,13 @@ const ContactPage = () => (
     >
       <input type="hidden" name="bot-field" />
       <Label for="name">Name</Label>
-      <Input type="text" id="name" name="name" placeholder="John Doe" />
+      <Input type="text" id="name" name="name" placeholder="Lufi" />
       <Label for="email">Email</Label>
       <Input
         type="email"
         id="email"
         name="email"
-        placeholder="john.doe@gmail.com"
+        placeholder="ahmadlufi300@gmail.com"
       />
       <Label for="subject">Subject</Label>
       <Input
@@ -41,7 +41,7 @@ const ContactPage = () => (
         id="message"
         name="message"
         rows="5"
-        placeholder="Hello Lincon!"
+        placeholder="Hello Lufi!"
       />
       <Button type="submit">Send</Button>
     </form>

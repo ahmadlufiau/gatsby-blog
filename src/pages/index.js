@@ -34,28 +34,11 @@ const AboutPage = () => {
       <SEO title="About" />
       <Title>About me</Title>
       <Paragraph>
-        I’m a <strong>Software Developer</strong> specialized in{' '}
-        <strong>Front-end</strong>, I have more than 6 years of experience
-        building software for clients. Below is a quick overview of my history
-        and my main technical skill sets and technologies I use.
+        Hi, i’m <strong>Ahmad Lufi Alfianul 'Ula </strong> specialized in{' '}
+        <strong>Back-end</strong>
       </Paragraph>
-      <Image fluid={aboutImage.childImageSharp.fluid} />
-      <Paragraph>
-        For the past few years I've been able to work at{' '}
-        <strong>Locaweb Group</strong> that is one of the biggest tech companies
-        of Brazil, as a Front-end I could lead the Agency team at the E-commerce
-        division (Tray), there I managed to solve problems like{' '}
-        <strong>Web Performance</strong>, optimize the layouts for better
-        ranking in the <strong>Search Engines</strong>, also think about the{' '}
-        <strong>Responsive Design</strong> and develop new templates to optimze
-        the delivery time.
-      </Paragraph>
-      <Paragraph>
-        In my last job at Yapay's Engineer Team, I could start an{' '}
-        <strong>Design System</strong> from scratch, my mission was to create
-        the design guidelines for all the company's apps and define solid
-        patterns for the <strong>Front-end architecture</strong>.
-      </Paragraph>
+      {/* <Image fluid={aboutImage.childImageSharp.fluid} /> */}
+
       <LinksWrapper>
         <LinkPorf to="/portfolio">View Portfolio</LinkPorf>
         <LinkResume to="/">Download Resume</LinkResume>
