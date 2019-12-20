@@ -43,7 +43,7 @@ const PortfolioPage = () => {
   const { aboutImage } = useStaticQuery(
     graphql`
       query {
-        aboutImage: file(relativePath: { eq: "about.jpg" }) {
+        aboutImage: file(relativePath: { eq: "honjoya.jpg" }) {
           childImageSharp {
             fluid(maxWidth: 1024, maxHeight: 683) {
               ...GatsbyImageSharpFluid
