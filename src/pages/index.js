@@ -1,6 +1,5 @@
 import React from 'react'
 import media from 'styled-media-query'
-import Layout from '../components/Layout'
 import SEO from '../components/seo'
 import Recommendations from '../components/Recommendations'
 import styled from 'styled-components'
