@@ -1,4 +1,5 @@
 import React from 'react'
+import Layout from '../components/Layout'
 import media from 'styled-media-query'
 import SEO from '../components/seo'
 import Recommendations from '../components/Recommendations'
